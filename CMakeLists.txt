@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
 
-project(ProjectName LANGUAGES CXX VERSION 0.0.1)
+project(bostui LANGUAGES CXX VERSION 0.0.1)
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_CXX_STANDARD 20)
@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(src)
 
 include(GNUInstallDirs)
-install(TARGETS ProjectName
+install(TARGETS bostui
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
