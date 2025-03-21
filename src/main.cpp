@@ -14,7 +14,6 @@ int main()
 
     int y_max, x_max;
     getmaxyx(stdscr, y_max, x_max);
-    std::cout << x_max << " " << y_max;
 
     WINDOW *menu_window = newwin(y_max-4, 18, 2, x_max-20);
 
@@ -29,7 +28,8 @@ int main()
 
     menu->select();
 
-    curs_set(1);
+    getch();
+    endwin();
 
     return 0;
 }
