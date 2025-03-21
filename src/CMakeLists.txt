@@ -1,4 +1,5 @@
 add_executable(bostui main.cpp
+    controllers/animalcontroller.cpp
     menu/menu.cpp menu/option.cpp)
 
 target_include_directories(bostui PUBLIC ${CMAKE_SOURCE_DIR}/include)

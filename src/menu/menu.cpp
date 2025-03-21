@@ -2,9 +2,7 @@
 
 Menu::Menu(WINDOW *window) {
     m_window = window;
-    box(m_window, 0, 0);
     keypad(m_window, true);
-    wrefresh(m_window);
 }
 
 Menu::~Menu() {}
