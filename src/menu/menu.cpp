@@ -57,12 +57,7 @@ void Menu::render() const {
     wrefresh(m_window);
 }
 
-void Menu::invoke(int selection) const {
-    for (int i {0}; i < m_options.size(); ++i) {
-        const Option option = *m_options.at(i);
-        std::function<void()> func = option.action();
-        if (func != nullptr) {
-            func();
-        }
-    }
+void Menu::clear() {
+    wclear(m_window);
+    box(m_window, 0, 0);
 }

@@ -3,19 +3,19 @@
 
 #pragma once
 
+#include "controller.h"
+
 #include <ncurses.h>
 
-class AnimalController
+class AnimalController : public Controller
 {
 public:
-    static WINDOW *s_window;
-    
-    static void test();
+    static void start();
     
     AnimalController();
     ~AnimalController();
-
 private:
+    virtual std::shared_ptr<Menu> generate_menu() override;
 };
 
 #endif

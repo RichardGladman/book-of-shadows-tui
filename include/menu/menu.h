@@ -22,7 +22,7 @@ public:
     void add_option(std::shared_ptr<Option> option);
     std::shared_ptr<Option> select();
     void render() const;
-    void invoke(int selection) const;
+    void clear();
 
 private:
     WINDOW *m_window {};

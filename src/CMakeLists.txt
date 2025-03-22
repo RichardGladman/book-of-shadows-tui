@@ -1,4 +1,5 @@
 add_executable(bostui main.cpp
+    controllers/controller.cpp
     controllers/animalcontroller.cpp
     menu/menu.cpp menu/option.cpp)
 

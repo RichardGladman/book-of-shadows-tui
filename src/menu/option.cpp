@@ -11,8 +11,8 @@ Option::Option(WINDOW *window, const std::string &text, std::function<void()> ac
         std::string r_spaces((int)(max_x - m_text.size()) / 2, ' ');
         m_render_text = l_spaces + m_text + r_spaces;
 
-        if (m_render_text.length() >= max_x - 1) {
-            m_render_text = m_render_text.substr(0, m_render_text.length() - 1);
+        if (m_render_text.length() >= max_x - 2) {
+            m_render_text = m_render_text.substr(0, m_render_text.length() - 2);
         }
     
     }
