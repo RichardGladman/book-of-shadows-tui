@@ -20,7 +20,6 @@ Controller::~Controller()
 
 void Controller::run() {
     std::shared_ptr<Menu> menu = generate_menu();
-    menu->header("Animals");
     menu->clear();
 
     while (true) {

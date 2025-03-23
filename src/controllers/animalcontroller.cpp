@@ -44,6 +44,7 @@ void AnimalController::delete_action() {
 std::shared_ptr<Menu> AnimalController::generate_menu() {
     
     std::shared_ptr<Menu> menu = std::make_shared<Menu>(Controller::s_menu_window);
+    menu->header("Animals");
 
     std::shared_ptr<Option> add_new_option = std::make_shared<Option>(Controller::s_menu_window, "Add New", std::bind(&Controller::add_action, this), 1);
     std::shared_ptr<Option> edit_option = std::make_shared<Option>(Controller::s_menu_window, "Edit", std::bind(&Controller::edit_action, this), 2);
