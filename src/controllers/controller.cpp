@@ -28,6 +28,8 @@ void Controller::run() {
         std::shared_ptr<Option> chosen = menu->select();
 
         if (chosen->action() == nullptr) break;
+
+        chosen->action()();
     }
 
     menu->clear();

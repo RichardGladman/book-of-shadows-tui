@@ -17,14 +17,18 @@ public:
     Controller();
     ~Controller();
 
+    virtual void add_action() = 0;
+    virtual void edit_action() = 0;
+    virtual void view_action() = 0;
+    virtual void delete_action() = 0;
 protected:
     inline static WINDOW *s_main_window;
     inline static WINDOW *s_menu_window;
 
     void run();
+    virtual std::shared_ptr<Menu> generate_menu() = 0;
 
 private:
-    virtual std::shared_ptr<Menu> generate_menu() = 0;
 
 };
 
