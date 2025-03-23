@@ -4,6 +4,7 @@
 
 #include "controllers/controller.h"
 #include "controllers/animalcontroller.h"
+#include "controllers/colourcontroller.h"
 #include "menu/menu.h"
 #include "menu/option.h"
 
@@ -32,10 +33,13 @@ int main()
     Controller::set_menu_window(menu_window);
 
     std::shared_ptr<Option> animals_option = std::make_shared<Option>(menu_window, "Animals", AnimalController::start, 1);
-    std::shared_ptr<Option> colours_option = std::make_shared<Option>(menu_window, "Colours", nullptr, 2);
+    std::shared_ptr<Option> colours_option = std::make_shared<Option>(menu_window, "Colours", ColourController::start, 2);
+    std::shared_ptr<Option> quit_option = std::make_shared<Option>(menu_window, "Quit", nullptr, 3);
 
     menu->add_option(animals_option);
     menu->add_option(colours_option);
+    menu->add_option(quit_option);
+
     menu->clear();
 
     while (true) {
@@ -49,9 +53,6 @@ int main()
         option->action()();
     }
 
-
-
-    getch();
     endwin();
 
     return 0;
