@@ -7,6 +7,7 @@
 #include "controllers/colourcontroller.h"
 #include "controllers/godcontroller.h"
 #include "controllers/herbcontroller.h"
+#include "controllers/planetcontroller.h"
 #include "menu/menu.h"
 #include "menu/option.h"
 
@@ -38,7 +39,8 @@ int main()
     menu->add_option(std::make_shared<Option>(menu_window, "Colours", ColourController::start, 2));
     menu->add_option(std::make_shared<Option>(menu_window, "Gods", GodController::start, 3));
     menu->add_option(std::make_shared<Option>(menu_window, "Herbs", HerbController::start, 4));
-    menu->add_option(std::make_shared<Option>(menu_window, "Quit", nullptr, 5));
+    menu->add_option(std::make_shared<Option>(menu_window, "Planets", PlanetController::start, 5));
+    menu->add_option(std::make_shared<Option>(menu_window, "Quit", nullptr, 6));
 
     menu->clear();
 
